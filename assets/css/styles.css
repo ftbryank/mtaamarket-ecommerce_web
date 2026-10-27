@@ -490,3 +490,22 @@ footer a:hover {
         padding: 0 10px; /* Slims outer spacing margins so content fits */
     }
 }
+/* Logo wrapper */
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo image sizing */
+header .logo img {
+    height: 200px;          /* Increase this value to make the logo fill more vertical space */
+    width: 100%;           /* Changed from 100% to auto so the logo doesn't stretch or distort */
+      /* Keeps the image neatly contained within its bounds */
+}
+
+/* Website title next to the logo */
+header h1 {
+    font-size: 1.5rem;
+    color: #333333;
+    margin: 0;
+}

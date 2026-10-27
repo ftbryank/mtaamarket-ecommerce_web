@@ -73,4 +73,16 @@ FOREIGN KEY (product_id)
 REFERENCES products(id)
 ON DELETE CASCADE
 );
+CREATE TABLE IF NOT EXISTS users (
+  id            INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name          VARCHAR(100)  NOT NULL,
+  email         VARCHAR(190)  NOT NULL UNIQUE,
+  password_hash VARCHAR(255)  NOT NULL,
+  phone         VARCHAR(30)   NOT NULL DEFAULT '',
+  address       VARCHAR(255)  NOT NULL DEFAULT '',
+  city          VARCHAR(100)  NOT NULL DEFAULT '',
+  postal_code   VARCHAR(20)   NOT NULL DEFAULT '',
+  country       VARCHAR(100)  NOT NULL DEFAULT '',
+  created_at    TIMESTAMP     NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
  
